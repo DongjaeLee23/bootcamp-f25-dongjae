@@ -1,0 +1,172 @@
+/* Your Styles Here */
+body{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  margin: 0;
+  background-color: #ddf5f4;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: center; 
+  align-items: center; 
+  width: 100%;  
+  height: auto;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.container {
+  padding: 2px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-style: solid;
+  border-color: black;
+  width: 550px;
+  background-color: #f9ecec;
+}
+
+.glow-card {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+.glow-card .avatar {
+  padding: 25px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+
+.glow-card:hover::before {
+  opacity: 1;
+  animation: rainbow-glow 2s linear infinite;
+  width: 305px;
+  height: 305px;
+}
+
+
+.glow-card:hover .avatar {
+  transform: scale(1.05);
+}
+
+
+@keyframes rainbow-glow {
+  0% { box-shadow: 0 0 20px 5px red; }
+  20% { box-shadow: 0 0 20px 5px orange; }
+  40% { box-shadow: 0 0 20px 5px yellow; }
+  60% { box-shadow: 0 0 20px 5px green; }
+  80% { box-shadow: 0 0 20px 5px blue; }
+  100% { box-shadow: 0 0 20px 5px violet; }
+}
+
+
+
+#typed-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#typed-container span {
+  font-weight: bold;
+  display: inline;
+}
+
+#typed-container span {
+  font-size: 2vw;
+}
+
+#typed {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cloud {
+  position: absolute;
+  top: var(--top, 50px);
+  width: 200px;
+  height: 100px;
+  background: url("cloud.png") no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+  animation: moveClouds linear infinite;
+  z-index: -1;  
+  left: var(--start-left, -400px);
+}
+
+.cloud1 {
+  --top: 80px;
+  --start-left: 250px;
+  animation-duration: 25s;
+}
+
+.cloud2 {
+  --top: 180px;
+  --start-left: -150px;
+  transform: scale(2);
+  animation-duration: 80s;
+
+}
+
+.cloud3 {
+  --top: 300px;
+  --start-left: -400px;
+  transform: scale(1.2);
+  animation-duration: 50s;
+}
+
+.cloud4 {
+  --top: 200px;
+  --start-left: 900px;
+  transform: scale(1.3);
+  animation-duration: 30s;
+}
+
+.cloud5 {
+  --top: 420px;
+  --start-left: -210px;
+  transform: scale(0.9);
+  animation-duration: 38s;
+
+}
+
+@keyframes moveClouds {
+  0%   { left: var(--start-left, -400px); }
+  100% { left: 100vw; }
+}
+
+
+

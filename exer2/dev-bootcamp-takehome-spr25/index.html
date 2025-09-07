@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    </head>
+<!-- Your HTML Here -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    <div class="cloud cloud5"></div>
+    <div class="card">
+        <div class="glow-card">
+            <img src="dongjae.JPG" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+              <div id="typed-container">
+                <span id="intro">Hi, i'm Dongjae Lee<br></span>
+                <span>I am <br><span id="typed"></span></span>
+            </div>
+
+            <div id="typed-strings">
+                <p>a CS Major</p>
+                <p>a Student Researcher</p>
+                <p>a Software Engineer</p>
+                <p>an Avid Learner</p>
+                <p>a Helluva Engineer</p>
+            </div>
+
+            <script>
+                var typed = new Typed('#typed', {
+                stringsElement: '#typed-strings',
+                typeSpeed: 50,
+                backSpeed: 50,
+                loop: true,
+                backDelay: 700
+                });
+            </script>
+            <p>I graduated from my bachelors in CS last year and I am currently on my last semester of my 1-Year Master in Computer Science specializing in machine learning.
+                I am passionate about teaching and making education more accessible, which I've pursued as a Teaching Assistant for multiple semesters and through tutoring my peers.
+                Helping others build their skills in computer science and understand something for the first time is something I enjoy a lot.
+                Originally from NC, I have also traveled a lot during my time at Tech including Chicago, New York, Seattle, and Puerto Rico. 
+            </p>
+        </div>
+    </div>
+</html>
