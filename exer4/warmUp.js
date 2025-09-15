@@ -95,19 +95,19 @@ function findLongestWord(string) {
  */
 function combineObjects(object1, object2) {
   // TODO
-  return Object.assign(object1, object2)
-  // let obj = {}
-  // for (let key1 in object1) {
-  //   if (object1.hasOwnProperty(key1)) {
-  //     obj[key1] = object1[key1];
-  //   }
-  // }
-  // for (let key2 in object2) {
-  //   if (object2.hasOwnProperty(key2)) {
-  //     obj[key2] = object1[key2];
-  //   }
-  // }
-  // return obj
+  // return Object.assign(object1, object2)
+  let obj = {}
+  for (let key1 in object1) {
+    
+    obj[key1] = object1[key1];
+    
+  }
+  for (let key2 in object2) {
+    
+    obj[key2] = object2[key2];
+    
+  }
+  return obj
 }
 
 /**
