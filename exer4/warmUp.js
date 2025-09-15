@@ -17,6 +17,20 @@
  */
 function toLetterGrade(numGrade) {
   // TODO
+  if (numGrade < 0 || numGrade > 100) {
+    return "INVALID"
+  }
+  if (numGrade >= 90) {
+    return "A";
+  } else if (numGrade >= 80) {
+    return "B";
+  } else if (numGrade >= 70) {
+    return "C";
+  } else if (numGrade >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
 }
 
 /**
@@ -28,6 +42,13 @@ function toLetterGrade(numGrade) {
  */
 function getEvenElements(array) {
   // TODO
+  let even = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0) {
+      even.push(array[i])
+    }
+  }
+  return even
 }
 
 /**
@@ -41,6 +62,14 @@ function getEvenElements(array) {
  */
 function findLongestWord(string) {
   // TODO
+  let string_list = string.split(" ")
+  let maxString = ""
+  for (let i  = 0; i < string_list.length; i++) {
+    if (string_list[i].length > maxString.length) {
+      maxString = string_list[i]
+    }
+  }
+  return maxString.length
 }
 
 /**
@@ -66,6 +95,19 @@ function findLongestWord(string) {
  */
 function combineObjects(object1, object2) {
   // TODO
+  return Object.assign(object1, object2)
+  // let obj = {}
+  // for (let key1 in object1) {
+  //   if (object1.hasOwnProperty(key1)) {
+  //     obj[key1] = object1[key1];
+  //   }
+  // }
+  // for (let key2 in object2) {
+  //   if (object2.hasOwnProperty(key2)) {
+  //     obj[key2] = object1[key2];
+  //   }
+  // }
+  // return obj
 }
 
 /**
@@ -78,6 +120,18 @@ function combineObjects(object1, object2) {
  */
 function reverseArr(array) {
   // TODO
+  let left = 0;
+  let right = array.length - 1;
+
+  while (left <= right) {
+    let temp = array[right];
+    array[right] = array[left];
+    array[left] = temp;
+
+    right -= 1;
+    left += 1;
+  }
+  return array
 }
 
 // DO NOT EDIT BELOW THIS LINE -- the code is for testing purposes only!
