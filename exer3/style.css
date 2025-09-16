@@ -83,3 +83,15 @@ body {
 .search-button:hover {
   box-shadow: 0 0 7px rgba(66, 133, 244, 0.5);
 }
+
+.footer {
+  /* margin-top: 100px; */
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid black;
+  font-size: 20px;
+  position:fixed;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
