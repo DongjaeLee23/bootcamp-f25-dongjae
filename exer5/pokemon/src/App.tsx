@@ -4,11 +4,13 @@ import './App.css'
 import Display from "./components/pokemonDisplay";
 import {Moves} from "./components/moves";
 import InfoPanel from "./components/infoPanel";
+import MovesPanel from "./components/movesPanel";
 const URL = "https://pokeapi.co/api/v2/pokemon";
 
 function App() {
-  const [pokemonId, setPokemonId] = useState(184); // current Pokémon ID
+  const [pokemonId, setPokemonId] = useState(197); // current Pokémon ID
   const [pokemonJSON, setPokemonJSON] = useState<any | null>(null); // full data
+  const [activePanel, setActivePanel] = useState<"info" | "moves">("info"); // set info/moves 
 
   useEffect(() => {
     async function fetchPokemon() {
@@ -38,7 +40,14 @@ function App() {
         </div>
 
         {/* Right column */}
-        <InfoPanel pokemonJSON={pokemonJSON} />
+        <div className="right-column">
+          {activePanel === "info" && <InfoPanel pokemonJSON={pokemonJSON} />}
+          {activePanel === "moves" && <MovesPanel pokemonJSON={pokemonJSON} />}
+          <div className="info-buttons">
+            <button onClick={() => setActivePanel("info")}>Info</button>
+            <button onClick={() => setActivePanel("moves")}>Moves</button>
+          </div>
+        </div>
     </div>
     </>
   )

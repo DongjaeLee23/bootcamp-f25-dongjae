@@ -24,13 +24,15 @@
 .display,
 .moves {
   padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  /* border: 1px solid #ccc;
+  border-radius: 8px; */
 }
 
 .move-buttons {
   display: flex;
-  justify-content: space-between;
+  margin: 10px;
+  gap: 10px;  
+  justify-content: center;
   margin-top: 10px;
 }
 
@@ -52,6 +54,58 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+}
+
+
+.type-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pokemon-name {
+  width: 200px;
+  height: auto;
+  margin: 10px auto;
+  border: 2px solid #333;
+  border-radius: 6px;    /* rounded corners */
+  background-color: #f9f9f9;
+  padding: 10px;
+
+}
+
+.pokemon-image {
+  width: 200px;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 6px;    /* rounded corners */
+  padding: 10px;
+
+}
+
+.type-box {
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.moves-list, .stats-list {
+  max-height: 370px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  /* padding: 4px; */
+  background: #eaeaea;
+  text-align: left;
+  padding-left: 30px;
+  font-size: large;
+  font-weight: bold;
 }
 
 

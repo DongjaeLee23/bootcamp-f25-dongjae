@@ -9,11 +9,10 @@ export const Moves = ({ pokemonId, setPokemonId }: MovesProps) => {
 
   return (
     <div className="moves">
-      <h2>Moves</h2>
       <p>Current Pokémon ID: {pokemonId}</p>
       <div className="move-buttons">
-        <button onClick={handleLeft}>Left</button>
-        <button onClick={handleRight}>Right</button>
+        <button onClick={handleLeft}>&lt;</button>
+        <button onClick={handleRight}>&gt;</button>
       </div>
     </div>
   );
