@@ -7,7 +7,7 @@
 
 .app-container {
   display: flex;
-  height: 100vh; /* full screen */
+  height: auto; /* full screen */
   padding: 20px;
   box-sizing: border-box;
   gap: 20px;
@@ -39,7 +39,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* push buttons to bottom */
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px;
@@ -54,4 +53,5 @@
   justify-content: space-between;
   margin-top: 20px;
 }
+
 

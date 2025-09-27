@@ -1,11 +1,12 @@
 
+import {useState} from "react"
 import './App.css'
 import Display from "./components/pokemonDisplay";
 import Moves from "./components/moves";
 import InfoPanel from "./components/infoPanel";
 
 function App() {
-
+  const [pokemonId, setPokemonId] = useState(184);
 
   return (
     <>
@@ -17,8 +18,8 @@ function App() {
       <div className="app-container">
         {/* Left column */}
         <div className="left-column">
-          <Display />
-          <Moves />
+          <Display pokemonId={pokemonId} />
+          <Moves setPokemonId={setPokemonId}/>
         </div>
 
         {/* Right column */}
