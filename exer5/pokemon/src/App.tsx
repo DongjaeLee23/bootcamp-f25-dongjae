@@ -8,7 +8,7 @@ import MovesPanel from "./components/movesPanel";
 const URL = "https://pokeapi.co/api/v2/pokemon";
 
 function App() {
-  const [pokemonId, setPokemonId] = useState(197); // current Pokémon ID
+  const [pokemonId, setPokemonId] = useState(197); // current Pokémon ID 197
   const [pokemonJSON, setPokemonJSON] = useState<any | null>(null); // full data
   const [activePanel, setActivePanel] = useState<"info" | "moves">("info"); // set info/moves 
 
